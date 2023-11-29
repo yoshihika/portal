@@ -14,35 +14,65 @@ class PivotTableSeeder extends Seeder
      */
     public function run(): void
     {
+        function weekName($i)
+        {
+            switch ($i) {
+                case 0:
+                    return '月';
+                    break;
+                case 1:
+                    return '火';
+                    break;
+                case 2:
+                    return '水';
+                    break;
+                case 3:
+                    return '木';
+                    break;
+                case 4:
+                    return '金';
+                    break;
+                default:
+                    break;
+            }
+        }
+        
         $datas = [
             [
-                'course_id' => 21,
+                'course_id' => 16,
                 'user_id' => 1,
             ],
             [
-                'course_id' => 22,
+                'course_id' => 17,
                 'user_id' => 1,
             ],
             [
-                'course_id' => 23,
+                'course_id' => 18,
                 'user_id' => 1,
             ],
             [
-                'course_id' => 24,
+                'course_id' => 19,
                 'user_id' => 1,
             ],
             [
-                'course_id' => 25,
+                'course_id' => 20,
                 'user_id' => 1,
             ],
         ];
 
-        foreach ($datas as $data) {
-            DB::table('course_user')->insert([
-                'course_id' => $data['course_id'],
-                'user_id' => $data['user_id'],
-                'name' => '金'
-            ]);
+        $i = 0;
+        $j = 1;
+        while ($i < 5)
+        {
+            foreach ($datas as $data) {
+                DB::table('course_user')->insert([
+                    'course_id' => $j,
+                    'user_id' => $data['user_id'],
+                    'name' => weekName($i),
+                ]);
+                $j++;
+            }
+            $i++;
         }
     }
 }

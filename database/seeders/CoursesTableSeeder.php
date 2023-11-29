@@ -16,52 +16,74 @@ class CoursesTableSeeder extends Seeder
     {
         $datas = [
             [
-                'title' => '情報デザイン実習A',
-                'teacher' => '大同太郎',
+                'title' => '専門セミナ',
+                'teacher' => '山田花子',
                 'place' => 'B301',
-                'week' => '月',
                 'time' => 1,
             ],
             [
-                'title' => 'メディアクリエイティブ実習',
-                'teacher' => '佐藤健太',
+                'title' => 'デジタルデザイン論',
+                'teacher' => '太田健一',
                 'place' => 'S301',
-                'week' => '月',
                 'time' => 2,
             ],
             [
-                'title' => '視覚情報デザイン実習',
-                'teacher' => '佐藤健太',
+                'title' => '実践英語A',
+                'teacher' => '加藤英夫',
                 'place' => 'S301',
-                'week' => '月',
                 'time' => 3,
             ],
             [
-                'title' => 'デジタルデザイン論A',
-                'teacher' => '近藤史郎',
+                'title' => 'コミュニケーションデザイン論B',
+                'teacher' => '木村康弘',
                 'place' => 'X301',
-                'week' => '月',
                 'time' => 4,
             ],
             [
-                'title' => 'デジタルグラフィックス実習',
+                'title' => 'デジタルグラフィックス実習B',
                 'teacher' => '山本仁',
                 'place' => 'A1011',
-                'week' => '月',
                 'time' => 5,
             ],
         ];
 
-        foreach($datas as $data) {
-            DB::table('courses')->insert([
-                'title' => $data['title'],
-                'teacher' => $data['teacher'],
-                'place' => $data['place'],
-                'week' => $data['week'],
-                'time' => $data['time'],
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ]);
+        function weekName($i)
+        {
+            switch ($i) {
+                case 0:
+                    return '月';
+                    break;
+                case 1:
+                    return '火';
+                    break;
+                case 2:
+                    return '水';
+                    break;
+                case 3:
+                    return '木';
+                    break;
+                case 4:
+                    return '金';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        $i = 0;
+        while ($i < 5) {
+            foreach ($datas as $data) {
+                DB::table('courses')->insert([
+                    'title' => $data['title'],
+                    'teacher' => $data['teacher'],
+                    'place' => $data['place'],
+                    'week' => weekName($i),
+                    'time' => $data['time'],
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ]);
+            }
+            $i++;
         }
     }
 }

@@ -51,51 +51,18 @@
         </div>
 
         <div class="schedule-container">
-            <div class="card schedule-date bold">
-                <p class="year">2023</p>
-                <div class="date">
-                    <p class="month">07</p>
-                    <p class="slash-mobile">/</p>
-                    <div class="slash-pc"></div>
-                    <p class="day">11</p>
-                </div>
-                <p class="week">火曜日</p>
-                <a href="#" class="page-prev">◀</a>
-                <a href="#" class="page-next">▶</a>
-            </div>
+
             <div class="card schedule">
                 <p class="title bold">07/11の時間割</p>
                 <ul>
+                    @foreach($courses as $course)
                     <li>
-                        <p>1限</p>
-                        <p>卒業研究</p>
-                        <p>S101</p>
-                        <p>桐山　岳寛</p>
+                        <p>{{ $course->time }}限</p>
+                        <p class="course-name">{{ $course->title }}</p>
+                        <p><span>開催場所：</span>{{ $course->place }}AAAA</p>
+                        <p><span>担当講師：</span>{{ $course->teacher }}</p>
                     </li>
-                    <li>
-                        <p>1限</p>
-                        <p>卒業研究</p>
-                        <p>S101</p>
-                        <p>桐山　岳寛</p>
-                    </li>
-                    <li>
-                        <p>1限</p>
-                        <p>卒業研究</p>
-                        <p>S101</p>
-                        <p>桐山　岳寛</p>
-                    </li>
-                    <li>
-                        <p>1限</p>
-                        <p>卒業研究</p>
-                        <p>S101</p>
-                        <p>桐山　岳寛</p>
-                    </li>
-                    <li>
-                        <p>1限</p>
-                        <p>卒業研究</p>
-                        <p>S101</p>
-                        <p>桐山　岳寛</p>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
         </div>

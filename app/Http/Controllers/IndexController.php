@@ -11,12 +11,15 @@ class IndexController extends Controller
 {
     public function index(int $id) {
         $current_user = User::find($id);
-        $latest_mails = Mail::where('user_id', $current_user->id)->orderBy('created_at', 'desc')->take(5)->get();
+        $latest_mails = User::find($id)->mails()->orderBy('created_at', 'desc')->take(5)->get();
+        $mon_courses = User::find($id)->courses()->wherePivot('name', '月')->get();
+
 
         return view('MainMenu.index', [
             'user_id' => $current_user->id,
             'user_name' => $current_user->name,
             'mails' => $latest_mails,
+            'courses' => $mon_courses,
         ]);
     }
 
