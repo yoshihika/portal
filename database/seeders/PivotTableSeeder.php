@@ -14,7 +14,7 @@ class PivotTableSeeder extends Seeder
      */
     public function run(): void
     {
-        function weekName($i)
+        function weekName2($i)
         {
             switch ($i) {
                 case 0:
@@ -68,7 +68,7 @@ class PivotTableSeeder extends Seeder
                 DB::table('course_user')->insert([
                     'course_id' => $j,
                     'user_id' => $data['user_id'],
-                    'name' => weekName($i),
+                    'name' => weekName2($i),
                 ]);
                 $j++;
             }

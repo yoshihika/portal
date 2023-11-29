@@ -59,7 +59,7 @@
                     <li>
                         <p>{{ $course->time }}限</p>
                         <p class="course-name">{{ $course->title }}</p>
-                        <p><span>開催場所：</span>{{ $course->place }}AAAA</p>
+                        <p><span>開催場所：</span>{{ $course->place }}</p>
                         <p><span>担当講師：</span>{{ $course->teacher }}</p>
                     </li>
                     @endforeach
