@@ -50,4 +50,9 @@ class IndexController extends Controller
 
         return view('System.confirmed', compact('mon_datas', 'tue_datas', 'wed_datas', 'thu_datas', 'fri_datas'));
     }
+
+    public function courseList() {
+        $datas = Course::paginate(20);
+        return view('System.courses', compact('datas'));
+    }
 }

@@ -90,7 +90,7 @@ header {
     .login {
         width: 50%;
         min-width: 500px;
-        margin-top: $h1;
+        margin: $h1 0;
         padding: $h1 $h3;
 
         @include mobile() {
@@ -1354,6 +1354,55 @@ header {
                 padding: $h2;
                 border-radius: 20px;
             }
+        }
+    }
+}
+
+#course-list {
+    width: 95%;
+    margin: $h1 auto;
+
+    .unit {
+        padding: $h2;
+        .title {
+            font-size: $h2;
+            margin-bottom: $h3;
+        }
+        form {
+            margin-bottom: $h4;
+            p {
+                font-size: $h3;
+            }
+            select {
+                border: 2px solid $orange;
+            }
+            input {
+                background: $orange;
+                color: white;
+                padding: $p;
+                border-radius: 10px;
+            }
+        }
+        ul {
+            li {
+                background: $bg;
+                padding: $h4;
+                display: grid;
+                grid-template-columns: 3fr 1fr 1fr .75fr;
+                text-align: left;
+                margin-bottom: $h2;
+            }
+        }
+        .button {
+            width: 100%;
+            display: block;
+            background: $black;
+            color: white;
+            font-size: $h3;
+            padding: $h4;
+            text-align: center;
+            border-radius: 15px;
+            margin-top: $h4;
         }
     }
 }

@@ -46,3 +46,5 @@ Route::post('system/risyu/confirm', [IndexController::class, 'confirm'])->name('
 
 Route::get('system/edit/{id}', [EditController::class, 'hoge'])->name('system.edit');
 Route::post('system/edit/confirm', [EditController::class, 'update'])->name('system.confirm');
+
+Route::get('system/courses', [IndexController::class, 'courseList'])->name('system.courses');
