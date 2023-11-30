@@ -38,6 +38,8 @@
                 <input type="submit" class="button" value="ピンを留める">
             </form>
             @endif
+            <a href="{{ route('news-list') }}" class="back">お知らせ一覧に戻る</a>
+            <a href="{{ route('menu.index', ['id' => 1]) }}" class="back litte-margin">トップに戻る</a>
         </div>
     </div>
 </body>

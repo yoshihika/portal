@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ポータルサイト：メインメニュー</title>
+    <title>ポータルサイト：システム</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +25,12 @@
             <div class="line"></div>
         </a>
         <div class="card bold num2">
-            <img src="" alt="">
-            <p>成績・履修状況一覧表</p>
-            <p>履修登録確認表</p>
+            <div class="num2-container medium">
+                <button class="dl-button">成績・履修状況一覧表</button>
+                <button class="dl-button">履修登録確認表</button>
+            </div>
+            <p>非表示テキスト</p>
+            <p>ダウンロード</p>
             <div class="line"></div>
         </div>
         <div class="card bold num3">
@@ -53,18 +56,12 @@
                 <div class="line"></div>
             </div>
         </div>
-        <div class="container-2 bold">
-            <div class="card box">
-                <img src="" alt="">
-                <p>授業・時間割照会</p>
-                <div class="line"></div>
-            </div>
-            <div class="card box">
-                <img src="" alt="">
-                <p>授業・時間割照会</p>
-                <div class="line"></div>
-            </div>
-        </div>
+        <a href="{{ route('menu.index', ['id' => 1]) }}" class="container-2 card bold">
+            <img src="" alt="">
+            <p>トップ画面に戻る</p>
+            <div class="line"></div>
+        </a>
+    </div>
     </div>
 </body>
 

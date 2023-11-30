@@ -33,11 +33,16 @@ Route::get('news/{id}', [MailController::class, 'check'])->name('news.check');
 
 Route::get('menu/{id}', [IndexController::class, 'index'])->name('menu.index');
 
+Route::get('newslist/read', [MailController::class, 'readIndex'])->name('read.index');
+
+Route::get('newslist/pinned', [MailController::class, 'pinIndex'])->name('pinned.index');
+
 Route::get('system/menu', function () {
     return view('System.index');
 })->name('system.index');
 
 Route::get('system/risyu', [IndexController::class, 'risyuIndex'])->name('system.risyu');
+Route::post('system/risyu/confirm', [IndexController::class, 'confirm'])->name('risyu.confirm');
 
 Route::get('system/edit/{id}', [EditController::class, 'hoge'])->name('system.edit');
 Route::post('system/edit/confirm', [EditController::class, 'update'])->name('system.confirm');

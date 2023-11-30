@@ -59,7 +59,7 @@
                 </div>
             </div>
 
-            <input type="submit" class="submit bold" value="上記の時間割で登録する">
+            <input type="submit" class="submit bold" value="上記の時間割を反映する">
         </form>
     </div>
 </body>

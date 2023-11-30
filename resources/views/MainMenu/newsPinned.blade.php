@@ -20,23 +20,7 @@
     <div id="news-list">
         <div class="card medium news-list">
             <div class="title-container">
-                <p class="title bold">お知らせ一覧</p>
-                <div class="mark-container">
-                    <p class="caption"><span>●</span>
-                        @if($counter != 0)
-                        <a href="{{ route('read.index') }}">未読のお知らせが{{ $counter }}件あります</a>
-                        @else
-                        未読のお知らせはありません。
-                        @endif
-                    </p>
-                    <p class="caption"><span>●</span>
-                        @if($pin_counter != 0)
-                        <a href="{{ route('pinned.index') }}">ピンのついたお知らせが{{ $pin_counter }}件あります。</a>
-                        @else
-                        ピンのついたお知らせはありません。
-                        @endif
-                    </p>
-                </div>
+                <p class="title bold">ピン留めしたお知らせ一覧</p>
             </div>
             <ul>
                 @foreach($mails as $mail)
@@ -56,7 +40,8 @@
                 {{ $mails->links() }}
 
             </ul>
-            <a class="back" href="{{ route('menu.index', ['id' => 1]) }}">メインメニューに戻る</a>
+            <a class="back" href="{{ route('news-list') }}">お知らせ一覧に戻る</a>
+            <a class="back litte-margin" href="{{ route('menu.index', ['id' => 1]) }}">メインメニューに戻る</a>
         </div>
     </div>
 </body>

@@ -415,6 +415,7 @@ header {
                         justify-content: space-between;
                         text-align: left;
                         padding: $p;
+
                         span {
                             display: inline;
                             font-size: 13px;
@@ -449,25 +450,37 @@ header {
         }
 
         .title-container {
-            display: flex;
-            align-items: center;
             margin-bottom: $h2;
-            gap: $h1;
-
-            @include mobile() {
-                flex-direction: column;
-                gap: $h4;
-            }
+            
 
             .title {
                 font-size: $h2;
             }
 
-            .caption {
-                span {
-                    color: $blue;
+            .mark-container {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                .caption {
+                    span {
+                        color: $blue;
+                    }
+                    a {
+                        border-bottom: 2px dashed $black;
+                    }
+
+                    &:nth-of-type(2) {
+                        span {
+                            color: $orange;
+                        }
+                    }
+                }
+                @include mobile() {
+                    margin: $h4 0 $h1;
+                    grid-template-columns: 1fr;
+                    gap: $h4;
                 }
             }
+
         }
 
         ul {
@@ -503,10 +516,12 @@ header {
 
                     .mark-container {
                         display: flex;
+
                         .is-pinned {
                             margin-right: 0;
                             color: $orange;
                         }
+
                         .not-pinned {
                             margin-right: 0;
                             color: $orange;
@@ -572,29 +587,22 @@ header {
                     min-width: auto;
                 }
             }
+
+            
         }
 
-        .page-container {
+        .back {
+            background: $black;
+            border-radius: 10px;
+            color: white;
+            padding: $p;
+            display: block;
+            text-align: center;
             margin-top: $h2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: $p;
+        }
 
-            a {
-                font-size: $h2;
-            }
-
-            .page {
-                font-size: $h2;
-                background: $bg;
-                border-radius: 5px;
-                padding: $p2;
-
-                span {
-                    font-size: $h4;
-                }
-            }
+        .litte-margin {
+            margin-top: $h3;
         }
     }
 }
@@ -651,7 +659,10 @@ header {
             }
 
             .content {
-                line-height: $h2;
+                line-height: $h1;
+                @include mobile() {
+                    line-height: $h2;
+                }
             }
 
         }
@@ -667,13 +678,40 @@ header {
             text-align: center;
 
             @include mobile() {
-                width: 65%;
+                width: 100%;
             }
         }
 
         .pinned {
             background: $orange;
             color: white;
+            @include mobile() {
+                width: 100%;
+            }
+        }
+        .not-pinned {
+            
+        }
+
+        .back {
+            display: block;
+            width: 18%;
+            background: $black;
+            color: white;
+            padding: $p;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 190px;
+            margin-left: auto;
+            margin-right: 0;
+
+            @include mobile() {
+                width: 100%;
+            }
+        }
+
+        .litte-margin {
+            margin-top: $h2;
         }
     }
 }
@@ -723,19 +761,48 @@ header {
         padding: $h2;
         min-width: 290px;
 
-        img {
-            width: 200px;
+        .num2-container {
             height: 200px;
             margin-bottom: $h2;
+            display: flex;
+            flex-direction: column;
+            gap: $h1;
+            text-align: center;
+            font-size: $h2;
 
             @include mobile() {
                 height: 100px;
+                gap: $h4;
+                font-size: $h4;
+            }
+
+            button {
+                width: 100%;
+                height: 50%;
+
+                background: $orange;
+                color: white;
+                padding: $p;
+                border-radius: 10px;
+                transition: .25s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
 
         p {
             font-size: $h2;
             text-align: center;
+        }
+
+        p:nth-of-type(1) {
+            visibility: hidden;
+
+            @include mobile() {
+                display: none;
+            }
         }
 
         .line {
@@ -838,31 +905,29 @@ header {
     }
 
     .container-2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: $h3;
+        padding: $h2;
         min-width: 290px;
 
-        .box {
-            padding: $h2;
+        img {
+            width: 100%;
+            height: 100px;
+            margin-bottom: $h2;
 
-            img {
-                width: 100%;
+            @include mobile() {
                 height: 100px;
-                margin-bottom: $h2;
             }
+        }
 
-            p {
-                font-size: $h4;
-                text-align: center;
-            }
+        p {
+            font-size: $h2;
+            text-align: center;
+        }
 
-            .line {
-                width: 90%;
-                height: 3px;
-                margin: 0 auto;
-                background: $black;
-            }
+        .line {
+            width: 90%;
+            height: 3px;
+            margin: 0 auto;
+            background: $black;
         }
     }
 }
@@ -971,6 +1036,47 @@ header {
 
                 }
             }
+        }
+
+        form {
+            .button {
+                display: block;
+                width: 75%;
+                text-align: center;
+                font-size: $h2;
+                background: $orange;
+                color: white;
+                border-radius: 10px;
+                margin: $h2 auto 0;
+                padding: $p;
+                transition: .25s;
+
+                &:hover {
+                    width: 100%;
+                    padding: $h2;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            width: 75%;
+            margin: $h2 auto 0;
+            padding: $p;
+            font-size: $h2;
+            background: $black;
+            color: white;
+            border-radius: 10px;
+
+            transition: .25s;
+
+                &:hover {
+                    width: 100%;
+                    padding: $h2;
+                    border-radius: 20px;
+                }
         }
     }
 
@@ -1133,6 +1239,86 @@ header {
                 cursor: pointer;
                 background: $orange;
                 color: white;
+            }
+        }
+    }
+}
+
+#risyu-confirmed {
+    width: 95%;
+    margin: $h1 auto;
+
+    .unit {
+        padding: $h2;
+        min-width: 1160px;
+
+        .title {
+            font-size: $h1;
+            text-align: center;
+
+        }
+
+        .caption {
+            font-size: $h2;
+            text-align: center;
+            margin-bottom: $h3;
+        }
+
+        .unit-container {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: $h3;
+            width: 100%;
+
+            ul {
+                position: relative;
+                background: $blue;
+                padding: $h2;
+                color: white;
+                border-radius: $h2;
+                margin-bottom: $h2;
+
+                .week-name {
+                    font-size: $h1;
+                    margin-bottom: $h4;
+                    text-align: center;
+                }
+
+                li {
+                    padding: $p 0;
+                    border-bottom: 2px dashed white;
+
+                    &:first-of-type {
+                        padding-top: $p;
+                        border-top: 2px dashed white;
+                    }
+
+                    .class-name {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                }
+            }
+
+
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: $h2;
+            background: $black;
+            color: white;
+            padding: $p;
+            border-radius: 10px;
+            transition: .25s;
+
+            &:hover {
+                padding: $h2;
+                border-radius: 20px;
             }
         }
     }

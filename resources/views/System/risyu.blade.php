@@ -20,329 +20,81 @@
     <div id="risyu">
         <div class="unit card">
             <p class="title bold">2023年度　後期　履修日程</p>
+            <p class="caption">それぞれをクリックして編集できます</p>
             <div class="unit-container">
-                @for($i = 0; $i < 5; $i++) @switch($i) @case(0)
-            <ul>
-                <p class="week-name bold">月曜日</p>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="first[]" value="class_id">
-                            <p class="class-time">1限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">2限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">3限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">4限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">5限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            @break
-            @case(1)
-            <ul>
-                <p class="week-name bold">火曜日</p>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="first[]" value="class_id">
-                            <p class="class-time">1限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">2限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">3限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">4限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">5限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            @break
-            @case(2)
-            <ul>
-                <p class="week-name bold">水曜日</p>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="first[]" value="class_id">
-                            <p class="class-time">1限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">2限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">3限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">4限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">5限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            @break
-            @case(3)
-            <ul>
-                <p class="week-name bold">木曜日</p>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="first[]" value="class_id">
-                            <p class="class-time">1限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">2限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">3限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">4限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">5限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            @break
-            @case(4)
-            <ul>
-                <p class="week-name bold">金曜日</p>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="first[]" value="class_id">
-                            <p class="class-time">1限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">2限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">3限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">4限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="border">
-                        <div class="class-container">
-                            <input type="hidden" name="second[]" value="class_id">
-                            <p class="class-time">5限</p>
-                            <p class="class-name">情報デザイン研究2</p>
-                            <p>担当講師：桐山岳寛</p>
-                            <p>開催場所：A1011</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            @break
-            @endswitch
-            @endfor
-        </div>
-        <div class="status">
-            <p class="title bold">履修単位情報</p>
-            <div class="status-container">
-                <div class="content">
-                    <p class="unit-got">前期履修単位数：<span>10</span></p>
-                    <p class="unit-stock">前期履修上限単位数：<span>22</span></p>
-                </div>
-                <div class="content">
-                    <p class="unit-got">後期履修単位数：<span>10</span></p>
-                    <p class="unit-stock">後期履修上限単位数：<span>22</span></p>
-                </div>
-                <div class="content">
-                    <p class="unit-got">年間履修単位数：<span>20</span></p>
-                    <p class="unit-stock">これまでの履修単位数：<span>100</span></p>
-                </div>
+                <a href="{{ route('system.edit', ['id' => 1]) }}">
+                    <ul>
+                        <p class="week-name bold">月曜日</p>
+                        @foreach ($mon_datas as $mon)
+                        <li>
+                            <p class="class-time">{{ $mon->time }}限</p>
+                            <p class="class-name">{{ $mon->title }}</p>
+                            <p>担当講師：{{ $mon->teacher }}</p>
+                            <p>開催場所：{{ $mon->place }}</p>
+                        </li>
+                        @endforeach
+                    </ul>
+                </a>
+                <a href="{{ route('system.edit', ['id' => 2]) }}">
+                    <ul>
+                        <p class="week-name bold">火曜日</p>
+                        @foreach ($tue_datas as $tue)
+                        <li>
+                            <p class="class-time">{{ $tue->time }}限</p>
+                            <p class="class-name">{{ $tue->title }}</p>
+                            <p>担当講師：{{ $tue->teacher }}</p>
+                            <p>開催場所：{{ $tue->place }}</p>
+                        </li>
+                        @endforeach
+                    </ul>
+                </a>
+                <a href="{{ route('system.edit', ['id' => 3]) }}">
+                    <ul>
+                        <p class="week-name bold">水曜日</p>
+                        @foreach ($wed_datas as $wed)
+                        <li>
+                            <p class="class-time">{{ $wed->time }}限</p>
+                            <p class="class-name">{{ $wed->title }}</p>
+                            <p>担当講師：{{ $wed->teacher }}</p>
+                            <p>開催場所：{{ $wed->place }}</p>
+                        </li>
+                        @endforeach
+                    </ul>
+                </a>
+                <a href="{{ route('system.edit', ['id' => 4]) }}">
+                    <ul>
+                        <p class="week-name bold">木曜日</p>
+                        @foreach ($thu_datas as $thu)
+                        <li>
+                            <p class="class-time">{{ $thu->time }}限</p>
+                            <p class="class-name">{{ $thu->title }}</p>
+                            <p>担当講師：{{ $thu->teacher }}</p>
+                            <p>開催場所：{{ $thu->place }}</p>
+                        </li>
+                        @endforeach
+                    </ul>
+                </a>
+                <a href="{{ route('system.edit', ['id' => 5]) }}">
+                    <ul>
+                        <p class="week-name bold">金曜日</p>
+                        @foreach ($fri_datas as $fri)
+                        <li>
+                            <p class="class-time">{{ $fri->time }}限</p>
+                            <p class="class-name">{{ $fri->title }}</p>
+                            <p>担当講師：{{ $fri->teacher }}</p>
+                            <p>開催場所：{{ $fri->place }}</p>
+                        </li>
+                        @endforeach
+                    </ul>
+                </a>
             </div>
+            <form action="{{ route('risyu.confirm') }}" method="post">
+                @csrf
+                <input type="hidden" name="hoge" value="hoge">
+                <input type="submit" class="button bold" value="上記の日程で登録する">
+            </form>
+            <a href="{{ route('system.index') }}" class="back bold">メニューに戻る</a>
         </div>
-        <button class="bold">履修登録</button>
-        
     </div>
 </body>
 
