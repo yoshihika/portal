@@ -13,13 +13,14 @@ class IndexController extends Controller
         $current_user = User::find($id);
         $latest_mails = User::find($id)->mails()->orderBy('created_at', 'desc')->take(5)->get();
         $mon_courses = User::find($id)->courses()->wherePivot('name', '月')->get();
-
+        $counter = Mail::where('is_read', 1)->count();
 
         return view('MainMenu.index', [
             'user_id' => $current_user->id,
             'user_name' => $current_user->name,
             'mails' => $latest_mails,
             'courses' => $mon_courses,
+            'counter' => $counter,
         ]);
     }
 

@@ -154,7 +154,7 @@ header {
 // メインメニュー
 #main-index {
     width: 95%;
-    margin: $h3 auto 0;
+    margin: $h3 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: $h1;
@@ -285,7 +285,7 @@ header {
                     }
 
                     .read_off {
-                        color: rgba($color: #000000, $alpha: 0);
+                        color: $blue;
                         margin-right: $p;
                     }
 
@@ -474,33 +474,43 @@ header {
             li {
                 font-size: $h3;
                 margin-bottom: $h4;
-                display: flex;
-                justify-content: space-between;
                 align-items: center;
                 background: $bg;
-                padding: $h4;
+
 
                 @include mobile() {
                     display: block;
                 }
 
                 a {
-                    padding: $p2;
+                    padding: $p;
                     display: grid;
                     grid-template-columns: .25fr .5fr 6fr .5fr;
                     align-items: center;
                     gap: $h4;
-                    width: 75%;
+                    width: 100%;
                     min-width: 600px;
 
                     @include mobile() {
                         min-width: auto;
                         display: grid;
-                        grid-template-columns: .15fr .25fr .25fr;
+                        grid-template-columns: .15fr .25fr;
                         grid-template-rows: 1fr 1fr;
                         gap: $p2;
                         width: 100%;
 
+                    }
+
+                    .mark-container {
+                        display: flex;
+                        .is-pinned {
+                            margin-right: 0;
+                            color: $orange;
+                        }
+                        .not-pinned {
+                            margin-right: 0;
+                            color: $orange;
+                        }
                     }
 
                     span {
@@ -514,8 +524,12 @@ header {
 
                     .read {
                         color: $blue;
-                        grid-column-start: 1;
-                        margin-right: 0;
+                        margin-right: $p;
+                    }
+
+                    .read_off {
+                        color: $blue;
+                        margin-right: $p;
                     }
 
                     .date {
@@ -554,15 +568,8 @@ header {
 
 
                 .button {
-                    border: 3px solid $orange;
-                    color: $black;
-                    text-align: center;
-                    padding: $p2 $p;
-                    border-radius: 10px;
-
-                    @include mobile() {
-                        display: none;
-                    }
+                    width: 100%;
+                    min-width: auto;
                 }
             }
         }
@@ -649,7 +656,7 @@ header {
 
         }
 
-        button {
+        .button {
             width: 30%;
             min-width: 160px;
             display: block;
@@ -662,6 +669,11 @@ header {
             @include mobile() {
                 width: 65%;
             }
+        }
+
+        .pinned {
+            background: $orange;
+            color: white;
         }
     }
 }

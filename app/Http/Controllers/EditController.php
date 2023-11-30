@@ -63,7 +63,7 @@ class EditController extends Controller
             default:
                 break;
         }
-        return view('system.edit', compact('week', 'datas', 'lists', 'index'));
+        return view('System.edit', compact('week', 'datas', 'lists', 'index'));
     }
 
     public function update(Request $request) {

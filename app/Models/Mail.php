@@ -11,13 +11,18 @@ class Mail extends Model
     use HasFactory;
 
     const STATUS = [
-        0 => ['label' => '●', 'class' => 'read_off'],
+        0 => ['label' => '○', 'class' => 'read_off'],
         1 => ['label' => '●', 'class' => 'read'],
     ];
 
     const WHO = [
         4 => ['label' => '学生室'],
         5 => ['label' => '教務室']
+    ];
+
+    const PinStatus = [
+        0 => ['label' => '○', 'class' => 'not-pinned'],
+        1 => ['label' => '●','class' => 'is-pinned'],
     ];
 
     public function getIsReadLabelAttribute() {
@@ -36,6 +41,18 @@ class Mail extends Model
         $status = $this->attributes['sender_id'];
 
         return self::WHO[$status]['label'];
+    }
+
+    public function getIsPinnedClassAttribute() {
+        $status = $this->attributes['is_pinned'];
+
+        return self::PinStatus[$status]['class'];
+    }
+    
+    public function getIsPinnedLabelAttribute() {
+        $status = $this->attributes['is_pinned'];
+
+        return self::PinStatus[$status]['label'];
     }
 
     public function user(): BelongsTo

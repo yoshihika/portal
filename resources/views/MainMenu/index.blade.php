@@ -27,9 +27,16 @@
         <div class="card news">
             <div class="title-container">
                 <p class="title bold">最新のお知らせ</p>
-                <p class="caption"><span>●</span>未読のお知らせが3件あります。</p>
+                <p class="caption">
+                    <span>●</span>
+                    @if($counter === 0)
+                    未読のお知らせはありません。
+                    @else
+                    未読のお知らせが{{ $counter }}件あります。
+                    @endif
+                </p>
             </div>
-            <a href="{{ route('news-list', ['id' => $user_id]) }}" class="button">お知らせ一覧へ</a>
+            <a href="{{ route('news-list') }}" class="button">お知らせ一覧へ</a>
             <ul>
                 @foreach($mails as $mail)
                 <li>
@@ -41,7 +48,7 @@
                 </li>
                 @endforeach
             </ul>
-            <a href="{{ route('news-list', ['id' => $user_id]) }}" class="button-mobile">お知らせ一覧へ</a>
+            <a href="{{ route('news-list') }}" class="button-mobile">お知らせ一覧へ</a>
         </div>
 
         <div class="card d-act">

@@ -25,17 +25,9 @@ Route::get('/', function () {
     return view('Login.login');
 });
 
-// Route::post('menu', function () {
-//     return view('MainMenu.index');
-// });
+Route::get('newslist', [MailController::class, 'index'])->name('news-list');
 
-Route::get('newslist{id}', [MailController::class, 'index'])->name('news-list');
-
-Route::get('newslist/{id}', [MailController::class, 'index']);
-
-// Route::get('news/', function () {
-//     return view('MainMenu.news');
-// });
+Route::post('newslist', [MailController::class, 'pinned'])->name('news.update');
 
 Route::get('news/{id}', [MailController::class, 'check'])->name('news.check');
 

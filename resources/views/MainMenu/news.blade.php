@@ -25,7 +25,19 @@
                 <p class="date">受取日：{{ \Carbon\Carbon::parse($contents->created_at)->format("Y/m/d") }}</p>
                 <p class="content">{!! nl2br($contents->content) !!}</p>
             </div>
-            <button class="bold">ピンを留める</button>
+            @if($contents->is_pinned != 0)
+            <form action="{{ route('news.update') }}" method="post">
+                @csrf
+                <input type="hidden" name="mail_id" value="{{ $contents->id }}">
+                <input type="submit" class="button pinned" value="ピン留め中">
+            </form>
+            @else
+            <form action="{{ route('news.update') }}" method="post">
+                @csrf
+                <input type="hidden" name="mail_id" value="{{ $contents->id }}">
+                <input type="submit" class="button" value="ピンを留める">
+            </form>
+            @endif
         </div>
     </div>
 </body>

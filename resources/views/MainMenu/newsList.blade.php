@@ -21,28 +21,32 @@
         <div class="card medium news-list">
             <div class="title-container">
                 <p class="title bold">お知らせ一覧</p>
-                <p class="caption"><span>●</span>未読のお知らせが3件あります</p>
+                <p class="caption"><span>●</span>
+                    @if($counter != 0)
+                    未読のお知らせが{{ $counter }}件あります
+                    @else
+                    未読のお知らせはありません。
+                    @endif
+                </p>
             </div>
             <ul>
                 @foreach($mails as $mail)
                 <li>
                     <a href="{{ route('news.check', ['id' => $mail->id]) }}">
-                        <span class="read">{{ $mail->is_read_label }}</span>
+                        <div class="mark-container">
+                            <span class="{{ $mail->is_read_class }}">{{ $mail->is_read_label }}</span>
+                            <span class="{{ $mail->is_pinned_class }}">{{ $mail->is_pinned_label }}</span>
+                        </div>
                         <span class="date">{{ \Carbon\Carbon::parse($mail->created_at)->format("Y/m/d") }}</span>
                         <span class="content">{{ $mail->title }}</span>
                         <span class="sender">{{ $mail->sender_id_name}}</span>
                     </a>
-                    <div class="button">ピンを留める</div>
                 </li>
                 @endforeach
+
+                {{ $mails->links() }}
+
             </ul>
-            <div class="page-container">
-                <a href="#" class="button-prev">◀</a>
-                <div class="page">
-                    <p>01/10<span>ページ</span></p>
-                </div>
-                <a href="#" class="button-next">▶</a>
-            </div>
         </div>
     </div>
 </body>
