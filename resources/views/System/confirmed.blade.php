@@ -78,7 +78,7 @@
                     @endforeach
                 </ul>
             </div>
-            <a href="{{ route('system.index') }}" class="button bold">メインメニューに戻る</a>
+            <a href="{{ route('system.index') }}" class="button bold">メニューに戻る</a>
         </div>
     </div>
 </body>

@@ -979,10 +979,16 @@ header {
     .unit {
         padding: $h2;
         min-width: 1160px;
+        @include mobile() {
+            min-width: auto;
+        }
 
         .title {
             font-size: $h1;
             text-align: center;
+            @include mobile() {
+                font-size: $h2;
+            }
 
         }
 
@@ -990,6 +996,9 @@ header {
             font-size: $h2;
             text-align: center;
             margin-bottom: $h1;
+            @include mobile {
+                font-size: $h4;
+            }
         }
 
         .unit-container {
@@ -997,6 +1006,10 @@ header {
             grid-template-columns: repeat(5, minmax(0, 1fr));
             gap: $h3;
             width: 100%;
+
+            @include mobile() {
+                grid-template-columns: 1fr;
+            }
 
             a {
                 position: relative;
@@ -1053,6 +1066,10 @@ header {
                     padding: $h2;
                     border-radius: 20px;
                 }
+
+                @include mobile() {
+                    width: 100%;
+                }
             }
         }
 
@@ -1073,6 +1090,10 @@ header {
                     width: 100%;
                     padding: $h2;
                     border-radius: 20px;
+                }
+
+                @include mobile() {
+                    width: 100%;
                 }
         }
     }
@@ -1249,9 +1270,17 @@ header {
         padding: $h2;
         min-width: 1160px;
 
+        @include mobile() {
+            min-width: auto;
+        }
+
         .title {
             font-size: $h1;
             text-align: center;
+
+            @include mobile() {
+                font-size: $h2;
+            }
 
         }
 
@@ -1259,6 +1288,10 @@ header {
             font-size: $h2;
             text-align: center;
             margin-bottom: $h3;
+
+            @include mobile() {
+                font-size: $h4;
+            }
         }
 
         .unit-container {
@@ -1266,6 +1299,10 @@ header {
             grid-template-columns: repeat(5, minmax(0, 1fr));
             gap: $h3;
             width: 100%;
+
+            @include mobile() {
+                grid-template-columns: 1fr;
+            }
 
             ul {
                 position: relative;
