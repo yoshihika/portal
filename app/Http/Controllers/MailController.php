@@ -48,7 +48,7 @@ class MailController extends Controller
     }
 
     public function readIndex() {
-        $mails = User::find(1)->mails()->where('is_read', 0)->orderBy('created_at', 'desc')->paginate(15);
+        $mails = User::find(1)->mails()->where('is_read', 1)->orderBy('created_at', 'desc')->paginate(15);
 
         return view('MainMenu.newsRead', compact('mails'));
     }
