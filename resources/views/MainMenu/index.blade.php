@@ -14,12 +14,12 @@
 
 <body>
     <header>
-        <img src="{{asset('storage/logo.svg')}}">
+        <img src="{{asset('images/logo.svg')}}">
     </header>
 
     <div id="main-index">
         <a href="{{ route('system.index') }}" class="card system">
-            <img src="" alt="">
+            <img src="{{asset('images/logo-04.svg')}}" alt="教務システム">
             <p class="title bold">教務システム</p>
             <p class="caption">履修登録はこちらから！</p>
         </a>
@@ -52,7 +52,7 @@
         </div>
 
         <div class="card d-act">
-            <img src="" alt="">
+            <img src="{{ asset('images/logo-06.svg') }}" alt="">
             <p class="title bold">D-act （就職活動支援サイト）</p>
             <p class="caption">面談予約・求人情報等はこちらから！</p>
         </div>

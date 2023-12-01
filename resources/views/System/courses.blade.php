@@ -14,33 +14,12 @@
 
 <body>
     <header>
-        <img src="{{asset('storage/logo.svg')}}">
+        <img src="{{asset('images/logo.svg')}}">
     </header>
 
     <div id="course-list">
         <div class="unit card">
             <p class="title bold">シラバス照会</p>
-            <form action="" method="post">
-                @csrf
-                <p class="bold">条件で絞る</p>
-                <select name="week">
-                    <option value="月">月曜日</option>
-                    <option value="火">火曜日</option>
-                    <option value="水">水曜日</option>
-                    <option value="木">木曜日</option>
-                    <option value="金">金曜日</option>
-                    <option value="none">指定なし</option>
-                </select>
-                <select name="time">
-                    <option value="1">1限</option>
-                    <option value="2">2限</option>
-                    <option value="3">3限</option>
-                    <option value="4">4限</option>
-                    <option value="5">5限</option>
-                    <option value="none">指定なし</option>
-                </select>
-                <input type="submit" value="検索">
-            </form>
             <ul class="unit-container">
                 @foreach($datas as $data)
                 <li>

@@ -48,3 +48,4 @@ Route::get('system/edit/{id}', [EditController::class, 'hoge'])->name('system.ed
 Route::post('system/edit/confirm', [EditController::class, 'update'])->name('system.confirm');
 
 Route::get('system/courses', [IndexController::class, 'courseList'])->name('system.courses');
+Route::post('system/courses', [IndexController::class, 'courseSearch'])->name('courses.search');

@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <img src="{{asset('storage/logo.svg')}}">
+        <img src="{{asset('images/logo.svg')}}">
     </header>
 
     <div id="edit">

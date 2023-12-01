@@ -14,12 +14,12 @@
 
 <body>
     <header>
-        <img src="{{asset('storage/logo.svg')}}">
+        <img src="{{asset('images/logo.svg')}}">
     </header>
 
     <div id="sys-main">
         <a href="{{ route('system.risyu') }}" class="card bold num1">
-            <img src="" alt="">
+            <img src="{{ asset('images/logo-07.svg') }}" alt="履修登録">
             <p>履修登録</p>
             <p>履修希望申請</p>
             <div class="line"></div>
@@ -34,16 +34,16 @@
             <div class="line"></div>
         </div>
         <div class="card bold num3">
-            <img src="" alt="">
+            <img src="{{ asset('images/logo-08.svg') }}" alt="本人情報管理">
             <p>非表示テキスト</p>
             <p>本人情報管理</p>
             <div class="line"></div>
         </div>
-        <div class="card bold num4">
-            <img src="" alt="">
+        <a href="{{ route('system.courses') }}" class="card bold num4">
+            <img src="{{ asset('images/logo-10.svg') }}" alt="シラバス照会">
             <p>シラバス照会</p>
             <div class="line"></div>
-        </div>
+        </a>
         <div class="container-1 bold">
             <div class="card box">
                 <img src="" alt="">
@@ -57,7 +57,7 @@
             </div>
         </div>
         <a href="{{ route('menu.index', ['id' => 1]) }}" class="container-2 card bold">
-            <img src="" alt="">
+            <img src="{{ asset('images/logo-09.svg') }}" alt="トップ画面に戻る">
             <p>トップ画面に戻る</p>
             <div class="line"></div>
         </a>

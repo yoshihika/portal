@@ -6,14 +6,17 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Mail;
 use App\Models\Course;
+use Ramsey\Uuid\Type\Integer;
 
 class IndexController extends Controller
 {
-    function getWeek($name) {
+    function getWeek($name)
+    {
         User::find(1)->courses()->wherePivot('name', $name)->get();
     }
 
-    public function index(int $id) {
+    public function index(int $id)
+    {
         $current_user = User::find($id);
         $latest_mails = User::find($id)->mails()->orderBy('created_at', 'desc')->take(5)->get();
         $mon_courses = User::find($id)->courses()->wherePivot('name', '月')->get();
@@ -30,8 +33,9 @@ class IndexController extends Controller
         ]);
     }
 
-    public function risyuIndex() {
-        
+    public function risyuIndex()
+    {
+
         $mon_datas = User::find(1)->courses()->wherePivot('name', '月')->get();
         $tue_datas = User::find(1)->courses()->wherePivot('name', '火')->get();
         $wed_datas = User::find(1)->courses()->wherePivot('name', '水')->get();
@@ -41,7 +45,8 @@ class IndexController extends Controller
         return view('System.risyu', compact('mon_datas', 'tue_datas', 'wed_datas', 'thu_datas', 'fri_datas'));
     }
 
-    public function confirm() {
+    public function confirm()
+    {
         $mon_datas = User::find(1)->courses()->wherePivot('name', '月')->get();
         $tue_datas = User::find(1)->courses()->wherePivot('name', '火')->get();
         $wed_datas = User::find(1)->courses()->wherePivot('name', '水')->get();
@@ -51,8 +56,16 @@ class IndexController extends Controller
         return view('System.confirmed', compact('mon_datas', 'tue_datas', 'wed_datas', 'thu_datas', 'fri_datas'));
     }
 
-    public function courseList() {
+    public function courseList()
+    {
         $datas = Course::paginate(20);
+        return view('System.courses', compact('datas'));
+    }
+
+    public function courseSearch(Request $request)
+    {
+        $datas = Course::where('week', $request->name)->paginate(20);
+
         return view('System.courses', compact('datas'));
     }
 }
