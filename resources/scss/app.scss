@@ -305,7 +305,7 @@ header {
                 }
             }
 
-            
+
         }
     }
 
@@ -363,10 +363,38 @@ header {
         }
 
         .schedule {
-            padding: $h2 $h1;
+            padding: $h2;
 
             @include mobile() {
                 padding: $h2 $h4;
+            }
+
+            #days-container {
+                display: flex;
+                gap: $h4;
+                @include mobile() {
+                    display: grid;
+                    grid-template-columns: .5fr 1.5fr .5fr;
+                    text-align: center;
+                }
+
+                .title {
+                    text-align: left;
+
+                    @include mobile() {
+                        text-align: center;
+                    }
+                }
+
+                .mobile {
+                    display: block;
+                    font-size: $h2;
+
+                    @include mobile() {
+                        display: block;
+                        font-size: $h2;
+                    }
+                }
             }
 
             .title {
@@ -436,6 +464,7 @@ header {
                 .hide {
                     display: none;
                 }
+
                 .show {
                     display: grid;
                 }
@@ -462,7 +491,7 @@ header {
 
         .title-container {
             margin-bottom: $h2;
-            
+
 
             .title {
                 font-size: $h2;
@@ -471,10 +500,12 @@ header {
             .mark-container {
                 display: grid;
                 grid-template-columns: repeat(2, minmax(0, 1fr));
+
                 .caption {
                     span {
                         color: $blue;
                     }
+
                     a {
                         border-bottom: 2px dashed $black;
                     }
@@ -485,6 +516,7 @@ header {
                         }
                     }
                 }
+
                 @include mobile() {
                     margin: $h4 0 $h1;
                     grid-template-columns: 1fr;
@@ -599,7 +631,7 @@ header {
                 }
             }
 
-            
+
         }
 
         .back {
@@ -671,6 +703,7 @@ header {
 
             .content {
                 line-height: $h1;
+
                 @include mobile() {
                     line-height: $h2;
                 }
@@ -696,6 +729,7 @@ header {
         .pinned {
             background: $orange;
             color: white;
+
             @include mobile() {
                 width: 100%;
             }
@@ -996,6 +1030,7 @@ header {
     .unit {
         padding: $h2;
         min-width: 1160px;
+
         @include mobile() {
             min-width: auto;
         }
@@ -1003,6 +1038,7 @@ header {
         .title {
             font-size: $h1;
             text-align: center;
+
             @include mobile() {
                 font-size: $h2;
             }
@@ -1013,6 +1049,7 @@ header {
             font-size: $h2;
             text-align: center;
             margin-bottom: $h1;
+
             @include mobile {
                 font-size: $h4;
             }
@@ -1103,15 +1140,15 @@ header {
 
             transition: .25s;
 
-                &:hover {
-                    width: 100%;
-                    padding: $h2;
-                    border-radius: 20px;
-                }
+            &:hover {
+                width: 100%;
+                padding: $h2;
+                border-radius: 20px;
+            }
 
-                @include mobile() {
-                    width: 100%;
-                }
+            @include mobile() {
+                width: 100%;
+            }
         }
     }
 
@@ -1381,18 +1418,23 @@ header {
 
     .unit {
         padding: $h2;
+
         .title {
             font-size: $h2;
             margin-bottom: $h3;
         }
+
         form {
             margin-bottom: $h4;
+
             p {
                 font-size: $h3;
             }
+
             select {
                 border: 2px solid $orange;
             }
+
             input {
                 background: $orange;
                 color: white;
@@ -1400,6 +1442,7 @@ header {
                 border-radius: 10px;
             }
         }
+
         ul {
             li {
                 background: $bg;
@@ -1408,13 +1451,15 @@ header {
                 grid-template-columns: 3fr 1fr 1fr .75fr;
                 text-align: left;
                 margin-bottom: $h2;
+
                 @include mobile() {
                     grid-template-columns: auto;
                     grid-template-rows: repeat(4, minmax(0, 1fr));
-                    
+
                 }
             }
         }
+
         .button {
             width: 100%;
             display: block;

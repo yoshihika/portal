@@ -16,31 +16,31 @@ class CoursesTableSeeder extends Seeder
     {
         $datas = [
             [
-                'title' => '専門セミナ',
+                'title' => '専門セミナEFG',
                 'teacher' => '山田花子',
                 'place' => 'B301',
                 'time' => 1,
             ],
             [
-                'title' => 'デジタルデザイン論',
+                'title' => 'デジタルデザイン論GHU',
                 'teacher' => '太田健一',
                 'place' => 'S301',
                 'time' => 2,
             ],
             [
-                'title' => '実践英語A',
+                'title' => '実践英語AAgG',
                 'teacher' => '加藤英夫',
                 'place' => 'S301',
                 'time' => 3,
             ],
             [
-                'title' => 'コミュニケーションデザイン論B',
+                'title' => 'コミュニケーションデザイン論BGAG',
                 'teacher' => '木村康弘',
                 'place' => 'X301',
                 'time' => 4,
             ],
             [
-                'title' => 'デジタルグラフィックス実習B',
+                'title' => 'デジタルグラフィックス実習BYEA',
                 'teacher' => '山本仁',
                 'place' => 'A1011',
                 'time' => 5,

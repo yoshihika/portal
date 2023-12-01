@@ -60,7 +60,11 @@
         <div class="schedule-container">
 
             <div class="card schedule">
-                <p class="title bold"><span id="day">月曜日</span>の時間割</p>
+                <div id="days-container">
+                    <button id="prev" class="mobile">◀</button>
+                    <p class="title bold"><span id="month"></span>/<span id="date"></span>　<span id="day">月曜日</span>の時間割</p>
+                    <button id="next" class="mobile">▶</button>
+                </div>
                 <ul>
                     @foreach($mon_courses as $course)
                     <li class="mon hide">
