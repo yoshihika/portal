@@ -17,8 +17,8 @@ const friday = document.querySelectorAll('.fri');
 const now = document.querySelector('.schedule #day');
 const month = document.querySelector('#month');
 const date = document.querySelector('#date');
-month.textContent = today.getMonth() + 1;
-date.textContent = today.getDate();
+month.textContent = (today.getMonth() + 1).toString().padStart(2, '0');
+date.textContent = (today.getDate()).toString().padStart(2, '0');
 now.textContent = days[today.getDay()];
 
 const change = (hoge) => {
@@ -108,8 +108,8 @@ prev.addEventListener('click', () => {
 
     console.log(today.getDay());
     change(today.getDay());
-    month.textContent = today.getMonth() + 1;
-    date.textContent = today.getDate();
+    month.textContent = (today.getMonth() + 1).toString().padStart(2, '0');
+    date.textContent = (today.getDate()).toString().padStart(2, '0');
     now.textContent = days[today.getDay()];
     console.log(days[today.getDay()]);
 });
@@ -122,8 +122,8 @@ next.addEventListener('click', () => {
     }
     console.log(today.getDay());
     change(today.getDay());
-    month.textContent = today.getMonth() + 1;
-    date.textContent = today.getDate();
+    month.textContent = (today.getMonth() + 1).toString().padStart(2, '0');
+    date.textContent = (today.getDate()).toString().padStart(2, '0');
     now.textContent = days[today.getDay()];
     console.log(days[today.getDay()]);
 });
