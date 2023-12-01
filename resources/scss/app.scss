@@ -1399,6 +1399,11 @@ header {
                 grid-template-columns: 3fr 1fr 1fr .75fr;
                 text-align: left;
                 margin-bottom: $h2;
+                @include mobile() {
+                    grid-template-columns: auto;
+                    grid-template-rows: repeat(4, minmax(0, 1fr));
+                    
+                }
             }
         }
         .button {

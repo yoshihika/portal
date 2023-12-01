@@ -61,11 +61,4 @@ class IndexController extends Controller
         $datas = Course::paginate(20);
         return view('System.courses', compact('datas'));
     }
-
-    public function courseSearch(Request $request)
-    {
-        $datas = Course::where('week', $request->name)->paginate(20);
-
-        return view('System.courses', compact('datas'));
-    }
 }
