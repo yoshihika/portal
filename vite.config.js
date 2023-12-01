@@ -7,7 +7,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
-                'resources/js/days.js',
+                'resources/js/day.js',
                 'resources/scss/app.scss',
             ],
             refresh: true,
