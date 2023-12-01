@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/day.js'])
 </head>
 
 <body>
@@ -60,10 +60,42 @@
         <div class="schedule-container">
 
             <div class="card schedule">
-                <p class="title bold">07/11の時間割</p>
+                <p class="title bold"><span id="day">月曜日</span>の時間割</p>
                 <ul>
-                    @foreach($courses as $course)
-                    <li>
+                    @foreach($mon_courses as $course)
+                    <li class="mon hide">
+                        <p>{{ $course->time }}限</p>
+                        <p class="course-name">{{ $course->title }}</p>
+                        <p><span>開催場所：</span>{{ $course->place }}</p>
+                        <p><span>担当講師：</span>{{ $course->teacher }}</p>
+                    </li>
+                    @endforeach
+                    @foreach($tue_courses as $course)
+                    <li class="tue hide">
+                        <p>{{ $course->time }}限</p>
+                        <p class="course-name">{{ $course->title }}</p>
+                        <p><span>開催場所：</span>{{ $course->place }}</p>
+                        <p><span>担当講師：</span>{{ $course->teacher }}</p>
+                    </li>
+                    @endforeach
+                    @foreach($wed_courses as $course)
+                    <li class="wed hide">
+                        <p>{{ $course->time }}限</p>
+                        <p class="course-name">{{ $course->title }}</p>
+                        <p><span>開催場所：</span>{{ $course->place }}</p>
+                        <p><span>担当講師：</span>{{ $course->teacher }}</p>
+                    </li>
+                    @endforeach
+                    @foreach($thu_courses as $course)
+                    <li class="thu hide">
+                        <p>{{ $course->time }}限</p>
+                        <p class="course-name">{{ $course->title }}</p>
+                        <p><span>開催場所：</span>{{ $course->place }}</p>
+                        <p><span>担当講師：</span>{{ $course->teacher }}</p>
+                    </li>
+                    @endforeach
+                    @foreach($fri_courses as $course)
+                    <li class="fri hide">
                         <p>{{ $course->time }}限</p>
                         <p class="course-name">{{ $course->title }}</p>
                         <p><span>開催場所：</span>{{ $course->place }}</p>

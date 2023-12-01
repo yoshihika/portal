@@ -6,6 +6,7 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
+
 const LIST = document.querySelectorAll('#edit li');
 console.log(LIST);
 LIST.forEach((data) => {
