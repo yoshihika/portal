@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('Login.login');
-});
+})->name('login');
 
 Route::get('newslist', [MailController::class, 'index'])->name('news-list');
 

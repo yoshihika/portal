@@ -15,6 +15,7 @@
 <body>
     <header>
         <img src="{{asset('images/logo.svg')}}">
+        <a href="{{ route('login') }}" class="logout">×<span>ログアウト</span></a>
     </header>
 
     <div id="sys-main">
