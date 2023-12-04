@@ -46,13 +46,13 @@
         </a>
         <div class="container-1 bold">
             <div class="card box">
-                <img src="" alt="">
+                <img src="{{ asset('images/help.svg') }}" alt="">
                 <p>授業・時間割照会</p>
                 <div class="line"></div>
             </div>
             <div class="card box">
-                <img src="" alt="">
-                <p>授業・時間割照会</p>
+                <img src="{{ asset('images/help2.svg') }}" alt="">
+                <p>休講・補講状況照会</p>
                 <div class="line"></div>
             </div>
         </div>
