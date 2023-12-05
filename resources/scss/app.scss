@@ -66,13 +66,17 @@ header {
     border-bottom: 6px solid $blue;
     display: grid;
     place-items: center;
-    padding: 15px;
     background: #fff;
     position: relative;
+    height: 60px;
+
+    img {
+        height: 40px;
+    }
 
     @include mobile() {
         img {
-            width: 50%;
+            height: 50%;
         }
     }
 
@@ -426,6 +430,10 @@ header {
 
                     @include mobile() {
                         text-align: center;
+                        font-size: $h3;
+                        white-space: nowrap;
+                        display: flex;
+                        align-items: center;
                     }
                 }
 
@@ -763,6 +771,12 @@ header {
             border-radius: $h4;
             padding: $h4;
             text-align: center;
+            transition: .25s;
+
+            &:hover {
+                background: $orange;
+                color: white;
+            }
 
             @include mobile() {
                 width: 100%;
@@ -772,6 +786,12 @@ header {
         .pinned {
             background: $orange;
             color: white;
+            transition: .25s;
+
+            &:hover {
+                background: none;
+                color: $black;
+            }
 
             @include mobile() {
                 width: 100%;
@@ -1114,9 +1134,9 @@ header {
         }
 
         .caption {
-            font-size: $h2;
+            font-size: $h4;
             text-align: center;
-            margin-bottom: $h1;
+            margin-bottom: $p2;
 
             @include mobile {
                 font-size: $h4;
@@ -1142,7 +1162,7 @@ header {
                 transition: .25s;
 
                 &:hover {
-                    transform: scale(1.05);
+                    transform: scale(1.025);
                 }
 
                 .week-name {
@@ -1173,19 +1193,19 @@ header {
         form {
             .button {
                 display: block;
-                width: 75%;
+                width: 100%;
                 text-align: center;
                 font-size: $h2;
-                background: $orange;
-                color: white;
+                border: 2px solid $orange;
+                color: $black;
                 border-radius: 10px;
-                margin: $h2 auto 0;
+                margin: $h1 auto 0;
                 padding: $p;
                 transition: .25s;
 
                 &:hover {
-                    width: 100%;
-                    border-radius: 20px;
+                    background: $orange;
+                    color: white;
                 }
 
                 @include mobile() {
@@ -1216,6 +1236,7 @@ header {
                 width: 100%;
             }
         }
+        
     }
 
 }
@@ -1377,6 +1398,28 @@ header {
                 cursor: pointer;
                 background: $orange;
                 color: white;
+            }
+        }
+        .back {
+            display: block;
+            text-align: center;
+            width: 75%;
+            margin: $h2 auto 0;
+            padding: $p;
+            font-size: $h2;
+            background: $black;
+            color: white;
+            border-radius: 10px;
+
+            transition: .25s;
+
+            &:hover {
+                width: 100%;
+                border-radius: 20px;
+            }
+
+            @include mobile() {
+                width: 100%;
             }
         }
     }

@@ -8,6 +8,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
                 'resources/js/day.js',
+                'resources/js/toggle.js',
                 'resources/scss/app.scss',
             ],
             refresh: true,

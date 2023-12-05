@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class CoursesTableSeeder extends Seeder
+class NashiTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,33 +16,33 @@ class CoursesTableSeeder extends Seeder
     {
         $datas = [
             [
-                'title' => '造形デザイン演習',
-                'teacher' => '山田花子',
-                'place' => 'S101',
+                'title' => '履修なし',
+                'teacher' => '----',
+                'place' => '----',
                 'time' => 1,
             ],
             [
-                'title' => '基礎デザイン論',
-                'teacher' => '太田健一',
-                'place' => 'ゴビーホール',
+                'title' => '履修なし',
+                'teacher' => '----',
+                'place' => '----',
                 'time' => 2,
             ],
             [
-                'title' => '情報デザイン実習A',
-                'teacher' => '加藤英夫',
-                'place' => 'S301',
+                'title' => '履修なし',
+                'teacher' => '----',
+                'place' => '----',
                 'time' => 3,
             ],
             [
-                'title' => 'クリエイティブデザイン論',
-                'teacher' => '木村康弘',
-                'place' => 'X301',
+                'title' => '履修なし',
+                'teacher' => '----',
+                'place' => '----',
                 'time' => 4,
             ],
             [
-                'title' => 'メディアクリエイティブ実習',
-                'teacher' => '山本仁',
-                'place' => 'A1011',
+                'title' => '履修なし',
+                'teacher' => '----',
+                'place' => '----',
                 'time' => 5,
             ],
         ];

@@ -60,6 +60,7 @@
             </div>
 
             <input type="submit" class="submit bold" value="上記の時間割を反映する">
+            <a href="{{ route('system.risyu') }}" class="back">戻る</a>
         </form>
     </div>
 </body>
