@@ -49,8 +49,9 @@ class IndexController extends Controller
         $wed_datas = User::find(1)->courses()->wherePivot('name', '水')->get();
         $thu_datas = User::find(1)->courses()->wherePivot('name', '木')->get();
         $fri_datas = User::find(1)->courses()->wherePivot('name', '金')->get();
+        $sum = User::find(1)->courses()->sum('unit');
 
-        return view('System.risyu', compact('mon_datas', 'tue_datas', 'wed_datas', 'thu_datas', 'fri_datas'));
+        return view('System.risyu', compact('mon_datas', 'tue_datas', 'wed_datas', 'thu_datas', 'fri_datas', 'sum'));
     }
 
     public function confirm()

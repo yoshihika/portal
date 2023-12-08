@@ -13,9 +13,6 @@
 </head>
 
 <body>
-    <header>
-        <img src="{{asset('images/logo.svg')}}">
-    </header>
 
     <div id="edit">
         <form action="{{ route('system.confirm') }}" method="post" class="container card">
@@ -37,6 +34,7 @@
                         <input type="hidden" name="course[]" value="{{ $data->id }}">
                         <p>{{ $counter }}限</p>
                         <p>{{ $data->title }}</p>
+                        <p><span>単位数：</span>{{ $data->unit }}</p>
                         <p><span>担当講師：</span>{{ $data->teacher }}</p>
                         <p><span>開催場所：</span>{{ $data->place }}</p>
                     </div>
@@ -44,6 +42,7 @@
                         @foreach ($lists[$i] as $list)
                         <li value="{{ $list->id }}">
                             <p>{{ $list->title }}</p>
+                            <p><span>単位数：</span>{{ $data->unit }}</p>
                             <p><span>担当講師：</span>{{ $list->teacher }}</p>
                             <p><span>開催場所：</span>{{ $list->place }}</p>
                         </li>

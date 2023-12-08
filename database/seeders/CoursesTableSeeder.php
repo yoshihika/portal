@@ -20,30 +20,35 @@ class CoursesTableSeeder extends Seeder
                 'teacher' => '山田花子',
                 'place' => 'S101',
                 'time' => 1,
+                'unit' => 2,
             ],
             [
                 'title' => '基礎デザイン論',
                 'teacher' => '太田健一',
                 'place' => 'ゴビーホール',
                 'time' => 2,
+                'unit' => 2,
             ],
             [
                 'title' => '情報デザイン実習A',
                 'teacher' => '加藤英夫',
                 'place' => 'S301',
                 'time' => 3,
+                'unit' => 2,
             ],
             [
                 'title' => 'クリエイティブデザイン論',
                 'teacher' => '木村康弘',
                 'place' => 'X301',
                 'time' => 4,
+                'unit' => 2,
             ],
             [
                 'title' => 'メディアクリエイティブ実習',
                 'teacher' => '山本仁',
                 'place' => 'A1011',
                 'time' => 5,
+                'unit' => 2,
             ],
         ];
 

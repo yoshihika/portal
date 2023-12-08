@@ -23,6 +23,7 @@ $h1: 2.5rem;
 $h2: 1.5rem;
 $h3: 1.25rem;
 $h4: 1rem;
+$h5: .9rem;
 $p: 10px;
 $p2: 5px;
 
@@ -1070,7 +1071,7 @@ header {
 
 #risyu {
     width: 95%;
-    margin: $h1 auto;
+    margin: $h3 auto;
 
     .status {
         padding: $h2;
@@ -1124,7 +1125,7 @@ header {
         }
 
         .title {
-            font-size: $h1;
+            font-size: $h2;
             text-align: center;
 
             @include mobile() {
@@ -1134,7 +1135,7 @@ header {
         }
 
         .caption {
-            font-size: $h4;
+            font-size: $h5;
             text-align: center;
             margin-bottom: $p2;
 
@@ -1166,7 +1167,7 @@ header {
                 }
 
                 .week-name {
-                    font-size: $h1;
+                    font-size: $h2;
                     margin-bottom: $h4;
                     text-align: center;
                 }
@@ -1174,20 +1175,32 @@ header {
                 li {
                     padding: $p 0;
                     border-bottom: 2px dashed white;
+                    font-size: $h5;
 
                     &:first-of-type {
                         padding-top: $p;
                         border-top: 2px dashed white;
                     }
 
+                    .class-time {
+                        font-size: $h4;
+                    }
                     .class-name {
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
+                        margin-bottom: $p;
+                        font-size: $h5;
                     }
 
                 }
             }
+        }
+
+        .unit-counter {
+            font-size: $h2;
+            text-align: center;
+            margin-top: $h3;
         }
 
         form {
@@ -1199,7 +1212,7 @@ header {
                 border: 2px solid $orange;
                 color: $black;
                 border-radius: 10px;
-                margin: $h1 auto 0;
+                margin: $h3 auto 0;
                 padding: $p;
                 transition: .25s;
 
@@ -1243,7 +1256,7 @@ header {
 
 #edit {
     width: 95%;
-    margin: $h1 auto;
+    margin: $h3 auto;
 
     .container {
         padding: $h2;
@@ -1277,7 +1290,7 @@ header {
                     text-align: left;
                     display: grid;
                     align-items: baseline;
-                    grid-template-columns: .25fr 3fr 1fr 1fr;
+                    grid-template-columns: .25fr 2fr .5fr 1fr 1fr;
                     gap: 10px;
                     margin-bottom: $h2;
                     border-bottom: 2px dashed $black;
@@ -1337,7 +1350,7 @@ header {
                         transition: .15s;
                         padding: $h4 $h3;
                         display: grid;
-                        grid-template-columns: 2fr .5fr .5fr;
+                        grid-template-columns: 2fr .5fr .5fr .5fr;
                         gap: $p;
                         border-bottom: 2px dashed $black;
                         white-space: nowrap;
@@ -1384,6 +1397,11 @@ header {
             }
         }
 
+        .unit-counter {
+            font-size: $h2;
+            text-align: right;
+        }
+
         .submit {
             font-size: $h2;
             border: 2px solid $orange;
@@ -1427,7 +1445,7 @@ header {
 
 #risyu-confirmed {
     width: 95%;
-    margin: $h1 auto;
+    margin: $h3 auto;
 
     .unit {
         padding: $h2;
@@ -1438,7 +1456,7 @@ header {
         }
 
         .title {
-            font-size: $h1;
+            font-size: $h2;
             text-align: center;
 
             @include mobile() {
@@ -1448,7 +1466,7 @@ header {
         }
 
         .caption {
-            font-size: $h2;
+            font-size: $h4;
             text-align: center;
             margin-bottom: $h3;
 
@@ -1476,7 +1494,7 @@ header {
                 margin-bottom: $h2;
 
                 .week-name {
-                    font-size: $h1;
+                    font-size: $h2;
                     margin-bottom: $h4;
                     text-align: center;
                 }
@@ -1484,6 +1502,7 @@ header {
                 li {
                     padding: $p 0;
                     border-bottom: 2px dashed white;
+                    font-size: $h5;
 
                     &:first-of-type {
                         padding-top: $p;
@@ -1504,7 +1523,7 @@ header {
 
         .button {
             display: block;
-            width: 100%;
+            width: 75%;
             text-align: center;
             font-size: $h2;
             background: $black;
@@ -1512,10 +1531,10 @@ header {
             padding: $p;
             border-radius: 10px;
             transition: .25s;
+            margin: 0 auto;
 
             &:hover {
-                padding: $h2;
-                border-radius: 20px;
+                width: 100%;
             }
         }
     }

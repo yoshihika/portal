@@ -9,6 +9,7 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/js/day.js',
                 'resources/js/toggle.js',
+                'resources/js/alert.js',
                 'resources/scss/app.scss',
             ],
             refresh: true,

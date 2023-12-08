@@ -20,30 +20,35 @@ class NashiTableSeeder extends Seeder
                 'teacher' => '----',
                 'place' => '----',
                 'time' => 1,
+                'unit' => 0,
             ],
             [
                 'title' => '履修なし',
                 'teacher' => '----',
                 'place' => '----',
                 'time' => 2,
+                'unit' => 0,
             ],
             [
                 'title' => '履修なし',
                 'teacher' => '----',
                 'place' => '----',
                 'time' => 3,
+                'unit' => 0,
             ],
             [
                 'title' => '履修なし',
                 'teacher' => '----',
                 'place' => '----',
                 'time' => 4,
+                'unit' => 0,
             ],
             [
                 'title' => '履修なし',
                 'teacher' => '----',
                 'place' => '----',
                 'time' => 5,
+                'unit' => 0,
             ],
         ];
 
@@ -79,6 +84,7 @@ class NashiTableSeeder extends Seeder
                     'place' => $data['place'],
                     'week' => weekName($i),
                     'time' => $data['time'],
+                    'unit' => $data['unit'],
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ]);

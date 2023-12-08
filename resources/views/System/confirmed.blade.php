@@ -13,10 +13,6 @@
 </head>
 
 <body>
-    <header>
-        <img src="{{asset('images/logo.svg')}}">
-    </header>
-
     <div id="risyu-confirmed">
         <div class="unit card">
             <p class="title bold">履修登録完了！</p>

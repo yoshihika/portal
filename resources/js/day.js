@@ -6,7 +6,18 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
-let today = new Date()
+document.querySelector('.d-act').addEventListener('click', () => {
+    window.alert('Sorry!このボタンは機能しません');
+});
+
+let today = new Date();
+if (today.getDay() === 0) 
+{
+    today.setDate(today.getDate() + 1);
+} else if (today.getDay() === 6)
+{
+    today.setDate(today.getDate() + 2);
+}
 const days = ['日曜日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日'];
 const monday = document.querySelectorAll('.mon');
 const tuesday = document.querySelectorAll('.tue');

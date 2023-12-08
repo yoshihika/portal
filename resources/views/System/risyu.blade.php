@@ -13,10 +13,6 @@
 </head>
 
 <body>
-    <header>
-        <img src="{{asset('images/logo.svg')}}">
-    </header>
-
     <div id="risyu">
         <div class="unit card">
             <p class="title bold">2023年度　後期　履修日程</p>
@@ -29,6 +25,7 @@
                         <li>
                             <p class="class-time">{{ $mon->time }}限</p>
                             <p class="class-name">{{ $mon->title }}</p>
+                            <p>単位数：{{$mon->unit}}</p>
                             <p>担当講師：{{ $mon->teacher }}</p>
                             <p>開催場所：{{ $mon->place }}</p>
                         </li>
@@ -42,6 +39,7 @@
                         <li>
                             <p class="class-time">{{ $tue->time }}限</p>
                             <p class="class-name">{{ $tue->title }}</p>
+                            <p>単位数：{{$tue->unit}}</p>
                             <p>担当講師：{{ $tue->teacher }}</p>
                             <p>開催場所：{{ $tue->place }}</p>
                         </li>
@@ -55,6 +53,7 @@
                         <li>
                             <p class="class-time">{{ $wed->time }}限</p>
                             <p class="class-name">{{ $wed->title }}</p>
+                            <p>単位数：{{$wed->unit}}</p>
                             <p>担当講師：{{ $wed->teacher }}</p>
                             <p>開催場所：{{ $wed->place }}</p>
                         </li>
@@ -68,6 +67,7 @@
                         <li>
                             <p class="class-time">{{ $thu->time }}限</p>
                             <p class="class-name">{{ $thu->title }}</p>
+                            <p>単位数：{{$thu->unit}}</p>
                             <p>担当講師：{{ $thu->teacher }}</p>
                             <p>開催場所：{{ $thu->place }}</p>
                         </li>
@@ -81,6 +81,7 @@
                         <li>
                             <p class="class-time">{{ $fri->time }}限</p>
                             <p class="class-name">{{ $fri->title }}</p>
+                            <p>単位数：{{$fri->unit}}</p>
                             <p>担当講師：{{ $fri->teacher }}</p>
                             <p>開催場所：{{ $fri->place }}</p>
                         </li>
@@ -88,6 +89,7 @@
                     </ul>
                 </a>
             </div>
+            <p class="unit-counter bold">今期の総単位数：{{$sum}}</p>
             <form action="{{ route('risyu.confirm') }}" method="post">
                 @csrf
                 <input type="hidden" name="hoge" value="hoge">
