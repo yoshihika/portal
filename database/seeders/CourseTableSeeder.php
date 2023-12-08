@@ -50,7 +50,7 @@ class CourseTableSeeder extends Seeder
                 'title' => $data['title'],
                 'teacher' => $data['teacher'],
                 'place' => $data['place'],
-                'week' => '火',
+                'week' => '水',
                 'time' => $data['time'],
                 'unit' => $data['unit'],
                 'created_at' => Carbon::now(),
