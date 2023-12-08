@@ -16,40 +16,33 @@ class CourseTableSeeder extends Seeder
     {
         $datas = [
             [
-                'title' => 'コンピュータサウンドB',
-                'teacher' => '岡田啓介',
-                'place' => 'D201',
+                'title' => '実践英語',
+                'teacher' => '高橋徹',
+                'place' => 'ゴビーホール',
                 'time' => 1,
-                'unit' => 2,
+                'unit' => 1,
             ],
             [
-                'title' => '映像デザイン基礎実習2',
-                'teacher' => '吉田翔',
-                'place' => 'B301',
+                'title' => '社会学B',
+                'teacher' => '花田洋子',
+                'place' => 'S201',
                 'time' => 2,
                 'unit' => 2,
             ],
             [
-                'title' => 'CAD実習1',
-                'teacher' => '船橋光一',
-                'place' => 'D201',
+                'title' => 'デジタルグラフィックス実習B',
+                'teacher' => '山本誠二',
+                'place' => 'D211',
                 'time' => 3,
                 'unit' => 2,
             ],
             [
-                'title' => '文化人類学A',
-                'teacher' => '高橋匠',
-                'place' => 'B304',
+                'title' => 'メディアクリエイティブ実習B',
+                'teacher' => '喜多川優',
+                'place' => 'S101',
                 'time' => 4,
                 'unit' => 2,
             ],
-            [
-                'title' => 'デジタルエンジニアリング1',
-                'teacher' => '高橋匠',
-                'place' => 'D201',
-                'time' => 5,
-                'unit' => 2,
-            ]
         ];
 
         foreach ($datas as $data) {
