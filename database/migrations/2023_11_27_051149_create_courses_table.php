@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('place');
             $table->string('week');
             $table->integer('time');
-            $table->integer('unit')->default(2);
+            $table->integer('unit');
             $table->timestamps();
         });
     }

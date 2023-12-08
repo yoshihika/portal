@@ -42,7 +42,7 @@
                         @foreach ($lists[$i] as $list)
                         <li value="{{ $list->id }}">
                             <p>{{ $list->title }}</p>
-                            <p><span>単位数：</span>{{ $data->unit }}</p>
+                            <p><span>単位数：</span>{{ $list->unit }}</p>
                             <p><span>担当講師：</span>{{ $list->teacher }}</p>
                             <p><span>開催場所：</span>{{ $list->place }}</p>
                         </li>

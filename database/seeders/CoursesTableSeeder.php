@@ -84,6 +84,7 @@ class CoursesTableSeeder extends Seeder
                     'place' => $data['place'],
                     'week' => weekName($i),
                     'time' => $data['time'],
+                    'unit' => $data['unit'],
                     'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now(),
                 ]);
