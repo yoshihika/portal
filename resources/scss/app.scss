@@ -87,16 +87,20 @@ header {
         top: 50%;
         right: $h1;
         width: 10%;
+        min-width: 110px;
         text-align: center;
         background: $black;
         color: white;
         padding: $p;
         border-radius: 30px;
+        font-size: $h5;
 
         @include mobile() {
-            font-size: $h4;
-            width: 12%;
+            font-size: $h5;
+            width: 10%;
             right: $p;
+            min-width: auto;
+            border-radius: 5px;
         }
 
         span {
