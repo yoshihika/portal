@@ -20,30 +20,35 @@ class CourseTableSeeder extends Seeder
                 'teacher' => '岡田啓介',
                 'place' => 'D201',
                 'time' => 1,
+                'unit' => 2,
             ],
             [
                 'title' => '映像デザイン基礎実習2',
                 'teacher' => '吉田翔',
                 'place' => 'B301',
                 'time' => 2,
+                'unit' => 2,
             ],
             [
                 'title' => 'CAD実習1',
                 'teacher' => '船橋光一',
                 'place' => 'D201',
                 'time' => 3,
+                'unit' => 2,
             ],
             [
                 'title' => '文化人類学A',
                 'teacher' => '高橋匠',
                 'place' => 'B304',
                 'time' => 4,
+                'unit' => 2,
             ],
             [
                 'title' => 'デジタルエンジニアリング1',
                 'teacher' => '高橋匠',
                 'place' => 'D201',
                 'time' => 5,
+                'unit' => 2,
             ]
         ];
 
@@ -52,8 +57,9 @@ class CourseTableSeeder extends Seeder
                 'title' => $data['title'],
                 'teacher' => $data['teacher'],
                 'place' => $data['place'],
-                'week' => '金',
+                'week' => '月',
                 'time' => $data['time'],
+                'unit' => $data['unit'],
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ]);
